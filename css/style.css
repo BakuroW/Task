@@ -1,0 +1,44 @@
+.workspace {
+    margin-top: 10%;
+}
+body {
+    background-image: url("/images/background.jpg");
+}
+h1,h4   {
+    text-align: center;
+}
+
+.post {
+    margin-top: 50px;
+}
+
+#addRecall {
+    margin: 6px;
+}
+#form {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+input {
+    margin: 8px;
+}
+.show {
+    margin: 6px;
+}
+#check {
+    display: none;
+    margin: 5px;
+}
+#showRecall {
+    margin: 10px;
+
+}
+#date {
+    text-align: right;
+
+}
+#userPost {
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
