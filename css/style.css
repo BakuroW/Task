@@ -42,3 +42,7 @@ input {
     border: 1px solid #000000;
     border-radius: 5px;
 }
+.error{
+    color: red;
+    class: btn btn-primary;
+}

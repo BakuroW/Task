@@ -8,7 +8,9 @@
         <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
         <script type="application/ecmascript" src="/js/jquery.validate.min.js"></script>
         <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
         <script type="text/javascript" src="/js/jquery.form.js"></script>
+
         <link href="/css/style.css" rel="stylesheet">
 
         <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
@@ -30,7 +32,7 @@
 
                         <div class="modal-content">
 
-                            <form  method="post" action="/app/config/addRecall.php" id="modalForm">
+                            <form  method="post" id="modalForm">
                                 <div class="modal-header">
                                     <h2 class="modal-title" id="myModalLabel">Добавить отзыв</h2>
                                 </div>
@@ -47,7 +49,7 @@
                                         <input id="title"  name="title" type="text" placeholder="Введите заголовок" class="form-control input-md">
                                         <label>Введите текст отзыва:</label>
                                         <textarea rows="10" cols="45"  id="recall" name="recall"  placeholder="Введите текст отзыва" class="form-control input-md"></textarea>
-
+                                        <p class="invalid"></p>
                                     </div>
 
                                    <!--<div class="g-recaptcha" data-sitekey="6LeR-x0TAAAAAMjcxS8fOy45GVedOnrORY4ML-dK"></div>-->
@@ -92,7 +94,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="/js/validate.js"></script>
+   <!-- <script type="text/javascript" src="/js/validate.js"></script>-->
     <script type="text/javascript" src="/js/db/sendRecall.js"></script>
 
 </body>
