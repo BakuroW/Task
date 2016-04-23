@@ -11,6 +11,12 @@
 
         <script type="text/javascript" src="/js/jquery.form.js"></script>
 
+        <!--For upload-->
+        <link href="css/uploadfile.css" rel="stylesheet">
+        <script src="js/jquery.uploadfile.min.js" type="text/javascript"></script>
+
+
+
         <link href="/css/style.css" rel="stylesheet">
 
         <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
@@ -51,6 +57,9 @@
                                         <textarea rows="10" cols="45"  id="recall" name="recall"  placeholder="Введите текст отзыва" class="form-control input-md"></textarea>
                                         <p class="invalid"></p>
                                     </div>
+                                    <div id="fileuploader">Upload</div>
+
+
 
                                    <!--<div class="g-recaptcha" data-sitekey="6LeR-x0TAAAAAMjcxS8fOy45GVedOnrORY4ML-dK"></div>-->
 
@@ -58,7 +67,6 @@
 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                                    <button type="button" class="btn btn-default">Прикрепить файл</button>
                                     <button type="submit" id="submit" class="btn btn-success">Отправить отзыв</button>
                                 </div>
 
@@ -94,7 +102,6 @@
         </div>
     </div>
 
-   <!-- <script type="text/javascript" src="/js/validate.js"></script>-->
     <script type="text/javascript" src="/js/db/sendRecall.js"></script>
 
 </body>

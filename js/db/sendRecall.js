@@ -3,6 +3,20 @@ $(function() {
     refresh_shoutbox();
     setInterval(refresh_shoutbox, 15000);
 
+/*    $("#fileuploader").uploadFile({
+        url:"/app/upload/upload.php",
+        uploadStr:"Прикрепить файл",
+        multiple:false,
+        dragDrop:false,
+        maxFileCount:1,
+        fileName: "myfile",
+        showDownload:false
+*//*        downloadCallback:function(filename)
+        {
+            location.href="app/upload/download.php?filename="+filename;
+        }*//*
+    });*/
+
 
 
     $("#modalForm").validate({
@@ -59,18 +73,27 @@ $(function() {
 
         submitHandler: function () {
 
+
+           /* $("#fileuploader").uploadFile({
+                downloadCallback: function(filename)
+                {
+                    location.href="app/upload/download.php?filename="+filename;
+                }
+            });*/
+
             var name   =  $("#name").val();
             var email  =  $("#email").val();
             var title  =  $("#title").val();
             var recall =  $("#recall").val();
 
             var data = 'name='+ name +'&email='+ email + '&title=' + title + '&recall=' + recall;
-
+            alert('1');
             $.ajax({
                 type: "POST",
                 url: "app/config/addRecall.php",
                 data: data,
                 success: function(){
+                    alert('2');
                     $("#myModal").modal("hide");
                     $("#check").slideToggle(200).hide(7200);
                     $('#modalForm')[0].reset();
@@ -81,6 +104,14 @@ $(function() {
         }
 
     });
+
+    function upload() {
+
+
+
+
+    }
+
 
 
     function refresh_shoutbox() {
