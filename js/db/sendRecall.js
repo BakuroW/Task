@@ -4,6 +4,30 @@ $(function() {
     setInterval("refresh_shoutbox()", 15000);
 
 
+    $("#modalForm").validate({
+        rules: {
+            name:{
+                required: true
+            },
+            email:{
+                required: true
+            },
+            title:{
+                required: true
+            },
+            recall:{
+                required: true
+            }
+        },
+        submitHandler: function(){}
+
+
+
+    });
+
+
+
+
 
     $("#submit").click(function() {
         var name   =  $("#name").val();
@@ -12,6 +36,7 @@ $(function() {
         var recall =  $("#recall").val();
 
         var data = 'name='+ name +'&email='+ email + '&title=' + title + '&recall=' + recall;
+
 
         $.ajax({
             type: "POST",
@@ -23,7 +48,7 @@ $(function() {
                 $('#modalForm')[0].reset();
             }
         });
-        return false;
+        //return false;
     });
 
 });
