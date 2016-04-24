@@ -2,20 +2,15 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Scalar test</title>
+        <title>Scalar test</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
     <script type="application/ecmascript" src="/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-
-    <!--For upload-->
-
-
     <link href="/css/style.css" rel="stylesheet">
 
-    <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
+    <script src='http://www.google.com/recaptcha/api/js/recaptcha_ajax.js'></script>
 
 </head>
 <body>
@@ -27,8 +22,6 @@
 
         <div class="post">
 
-
-            <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
 
@@ -53,13 +46,16 @@
                                     <input id="title" name="title" type="text" placeholder="Введите заголовок"
                                            class="form-control input-md">
                                     <label>Введите текст отзыва:</label>
-                                    <textarea rows="10" cols="45" id="recall" name="recall"
-                                              placeholder="Введите текст отзыва"
-                                              class="form-control input-md"></textarea>
+                                    <textarea rows="10" cols="45" id="recall" name="recall" placeholder="Введите текст отзыва" class="form-control input-md"></textarea>
                                 </div>
+                                <!---->
+
+                                <input id="uploadImage" type="file" accept="image/*" name="image" />
+                                <div id="err"></div>
 
 
-                                <!--<div class="g-recaptcha" data-sitekey="6LeR-x0TAAAAAMjcxS8fOy45GVedOnrORY4ML-dK"></div>-->
+                                <div id="captcha"></div>
+                                <!---->
 
                             </div>
 
@@ -85,17 +81,15 @@
                 <p><i class="fa fa-info-circle"></i> Ваш отзыв был добавлен!</p>
             </div>
 
-            <div id="showRecall">
-
-            </div>
+            <div id="showRecall"></div>
 
         </div>
 
     </div>
 </div>
-</div>
 
-<script type="text/javascript" src="/js/db/sendRecall.js"></script>
+
+    <script type="text/javascript" src="/js/db/sendRecall.js"></script>
 
 </body>
 </html>

@@ -16,13 +16,44 @@ $dbname = DB_NAME;
 try {
     $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
+    $valid_extensions = array('jpeg', 'jpg', 'png', 'gif', 'bmp'); // valid extensions
+    $path = 'app/upload/files'; // upload directory
+    $final_image ='';
+
+    if(isset($_FILES['image']))
+    {
+        $img = $_FILES['image']['name'];
+        $tmp = $_FILES['image']['tmp_name'];
+
+        // get uploaded file's extension
+        $ext = strtolower(pathinfo($img, PATHINFO_EXTENSION));
+
+        // can upload same image using rand function
+        $final_image = rand(1000,1000000).$img;
+
+        // check's valid format
+        /*if(in_array($ext, $valid_extensions))
+        {
+            $path = $path.strtolower($final_image);
+
+            if(move_uploaded_file($tmp,$path))
+            {
+                //echo "<img src='$path' />";
+            }
+        }
+        else
+        {
+            //echo 'invalid file';
+        }*/
+    }
+
     if($_POST['name']&$_POST['email']&$_POST['title']&$_POST['recall']) {
 
-        $name   = $_POST['name'];
-        $email  = $_POST['email'];
-        $title  = $_POST['title'];
-        $recall = $_POST['recall'];
-        $filename   =  $_POST['filename'];
+        $name     =  $_POST['name'];
+        $email    =  $_POST['email'];
+        $title    =  $_POST['title'];
+        $recall   =  $_POST['recall'];
+        $filename =  $final_image;
 
         /*** set all errors to execptions ***/
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
