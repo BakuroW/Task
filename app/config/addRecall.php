@@ -22,12 +22,13 @@ try {
         $email  = $_POST['email'];
         $title  = $_POST['title'];
         $recall = $_POST['recall'];
+        $filename   =  $_POST['filename'];
 
         /*** set all errors to execptions ***/
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "INSERT INTO recalldata (date_time, name, email, title, recall)
-            VALUES (NOW(), :name, :email, :title, :recall)";
+        $sql = "INSERT INTO recalldata (date_time, name, email, title, recall, filename)
+            VALUES (NOW(), :name, :email, :title, :recall, :filename)";
         /*** prepare the statement ***/
 
         $stmt = $dbh->prepare($sql);
@@ -37,6 +38,8 @@ try {
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':title', $title, PDO::PARAM_STR);
         $stmt->bindParam(':recall', $recall, PDO::PARAM_STR);
+
+        $stmt->bindParam(':filename', $filename, PDO::PARAM_STR);
 
         /*** run the sql statement ***/
         if ($stmt->execute()) {

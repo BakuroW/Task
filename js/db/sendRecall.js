@@ -3,31 +3,23 @@ $(function() {
     refresh_shoutbox();
     setInterval(refresh_shoutbox, 15000);
 
-/*    $("#fileuploader").uploadFile({
-        url:"/app/upload/upload.php",
-        uploadStr:"Прикрепить файл",
-        multiple:false,
-        dragDrop:false,
-        maxFileCount:1,
-        fileName: "myfile",
-        showDownload:false
-*//*        downloadCallback:function(filename)
-        {
-            location.href="app/upload/download.php?filename="+filename;
-        }*//*
-    });*/
-
-
-
     $("#modalForm").validate({
 
         errorElement: "p",
 
 
         rules: {
+
             name: {
                 required: true,
-                rangelength : [4,15]
+                rangelength : [3,15],
+
+                remote: {
+                    url: "app/validation/check.php?type=check_name",
+                    type: "POST",
+                    delay: 5000
+
+                }
 
             },
             email: {
@@ -50,7 +42,8 @@ $(function() {
 
             name: {
                 required:    "Вы должны заполнить это поле",
-                rangelength: "Имя не должно быть меньше 4 и не больше 15 символов"
+                rangelength: "Имя не должно быть меньше 3 и не больше 15 символов"
+
                 },
 
             email: {
@@ -74,20 +67,15 @@ $(function() {
         submitHandler: function () {
 
 
-           /* $("#fileuploader").uploadFile({
-                downloadCallback: function(filename)
-                {
-                    location.href="app/upload/download.php?filename="+filename;
-                }
-            });*/
-
             var name   =  $("#name").val();
             var email  =  $("#email").val();
             var title  =  $("#title").val();
             var recall =  $("#recall").val();
+            var filename = '';
 
-            var data = 'name='+ name +'&email='+ email + '&title=' + title + '&recall=' + recall;
-            alert('1');
+
+            var data = 'name='+ name +'&email='+ email + '&title=' + title + '&recall=' + recall + '&filename=' + filename;
+
             $.ajax({
                 type: "POST",
                 url: "app/config/addRecall.php",
@@ -105,12 +93,6 @@ $(function() {
 
     });
 
-    function upload() {
-
-
-
-
-    }
 
 
 
