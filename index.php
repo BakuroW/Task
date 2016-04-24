@@ -50,8 +50,8 @@
                                 </div>
                                 <!---->
 
-                                <input id="uploadImage" type="file" accept="image/*" name="image" />
-                                <div id="err"></div>
+        <!--                        <input id="uploadImage" type="file"  name="image" />
+                                <div id="err"></div>-->
 
 
                                 <div id="captcha"></div>

@@ -31,14 +31,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="addRecall.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addRecall.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/config/addRecall.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538" vertical-offset="204" max-vertical-offset="1887">
-              <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.28333333" vertical-offset="51" max-vertical-offset="1360">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <marker date="1461522760344" expanded="true" signature="1585:1727" placeholder="INSERT INTO ..." />
-                <marker date="1461522760344" expanded="true" signature="2442:2499" placeholder="select * fro..recalldata..." />
+                <marker date="1461523510453" expanded="true" signature="730:872" placeholder="INSERT INTO ..." />
+                <marker date="1461523510453" expanded="true" signature="1587:1644" placeholder="select * fro..recalldata..." />
               </folding>
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="sendRecall.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/db/sendRecall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2941">
-              <caret line="134" column="29" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="2958">
+              <caret line="137" column="27" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -57,18 +57,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.961538" vertical-offset="408" max-vertical-offset="1700">
-              <caret line="53" column="52" selection-start-line="52" selection-start-column="32" selection-end-line="53" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajaxupload.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/upload/ajaxupload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.060714286" vertical-offset="0" max-vertical-offset="840">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.5" vertical-offset="408" max-vertical-offset="1700">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,10 +93,10 @@
         <option value="$PROJECT_DIR$/app/validation/check.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/app/recaptcha/checkCaptcha.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/app/upload/ajaxupload.php" />
         <option value="$PROJECT_DIR$/app/config/addRecall.php" />
         <option value="$PROJECT_DIR$/js/db/sendRecall.js" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -394,14 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/recaptcha/recaptchalib.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.4945586" vertical-offset="2907" max-vertical-offset="4811">
@@ -420,14 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.961538" vertical-offset="408" max-vertical-offset="1700">
-          <caret line="53" column="52" selection-start-line="52" selection-start-column="32" selection-end-line="53" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/recaptcha/checkCaptcha.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3440476" vertical-offset="0" max-vertical-offset="840">
@@ -436,30 +410,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/addRecall.php">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538" vertical-offset="204" max-vertical-offset="1887">
-          <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
-          <folding>
-            <marker date="1461522760344" expanded="true" signature="1585:1727" placeholder="INSERT INTO ..." />
-            <marker date="1461522760344" expanded="true" signature="2442:2499" placeholder="select * fro..recalldata..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="408" max-vertical-offset="1700">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/db/sendRecall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2941">
-          <caret line="134" column="29" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="2958">
+          <caret line="137" column="27" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/upload/ajaxupload.php">
+    <entry file="file://$PROJECT_DIR$/app/config/addRecall.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.060714286" vertical-offset="0" max-vertical-offset="840">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.28333333" vertical-offset="51" max-vertical-offset="1360">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1461523510453" expanded="true" signature="730:872" placeholder="INSERT INTO ..." />
+            <marker date="1461523510453" expanded="true" signature="1587:1644" placeholder="select * fro..recalldata..." />
+          </folding>
         </state>
       </provider>
     </entry>

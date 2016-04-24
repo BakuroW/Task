@@ -3,6 +3,8 @@ $(function() {
     refresh_shoutbox();
     setInterval(refresh_shoutbox, 15000);
 
+
+
     Recaptcha.create("6Ld0MR4TAAAAAM4_iyO9Sd8RoiCVYEOHCJWjPHXC", "captcha", {
         theme: "clean",
         callback: Recaptcha.focus_response_field
@@ -120,7 +122,6 @@ $(function() {
 
 
         submitHandler: function () {
-
 
             var name   =  $("#name").val();
             var email  =  $("#email").val();
