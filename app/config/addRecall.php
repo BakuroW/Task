@@ -22,7 +22,7 @@ try {
         $email    =  $_POST['email'];
         $title    =  $_POST['title'];
         $recall   =  $_POST['recall'];
-        $filename =  '';
+        $filename =  $_POST['filename'];
 
         /*** set all errors to execptions ***/
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -67,9 +67,11 @@ function populate_shoutbox() {
         echo '<strong>'.$row['title'].'</strong><br>';
         echo '<hr>';
         echo '<span class="">'.$row['recall'].'</span><br>';
-
-
+        echo '<hr>';
+        echo '<p>Файлы прикрепленные пользователем <strong>'.$row['name'].'</strong><p><br>';
+        if($row['filename']!='no file'&&$row['filename']!='Invalid file'){
+            echo '<img src="app/upload/'.$row['filename'].'" width="100" height="111" alt="Пользовательская картинка">';
+        }
         echo '</div>';
     }
-//glyphicon glyphicon-user <span class="glyphicon glyphicon-user-align-left" aria-hidden="true"></span>
 }

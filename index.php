@@ -9,9 +9,8 @@
     <script type="application/ecmascript" src="/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link href="/css/style.css" rel="stylesheet">
-
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
     <script src='http://www.google.com/recaptcha/api/js/recaptcha_ajax.js'></script>
-
 </head>
 <body>
 
@@ -48,14 +47,10 @@
                                     <label>Введите текст отзыва:</label>
                                     <textarea rows="10" cols="45" id="recall" name="recall" placeholder="Введите текст отзыва" class="form-control input-md"></textarea>
                                 </div>
-                                <!---->
+                                <div class="alert alert-info"><p>Здесь вы можете загрузить файл форматов gif,jpg,png.</p></div>
 
-        <!--                        <input id="uploadImage" type="file"  name="image" />
-                                <div id="err"></div>-->
-
-
+                                <input id="uploadImage" type="file" name="image">
                                 <div id="captcha"></div>
-                                <!---->
 
                             </div>
 
@@ -71,11 +66,9 @@
 
         <div class="list-group col-md-6 col-md-offset-3" id="form">
 
-            <button type="button" id="addRecall" class="btn btn-primary btn-lg" data-toggle="modal"
-                    data-target="#myModal">
+            <button type="button" id="addRecall" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
                 Оставить отзыв
             </button>
-
 
             <div id="check" class="alert alert-info" role="alert">
                 <p><i class="fa fa-info-circle"></i> Ваш отзыв был добавлен!</p>

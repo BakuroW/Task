@@ -42,6 +42,7 @@ $(function() {
         onkeyup: false,
         onfocusout: false,
         onclick: false,
+        debug: true,
 
         rules: {
 
@@ -87,8 +88,11 @@ $(function() {
                     url: "app/validation/check.php?type=check_recall",
                     type: "POST"
 
-                }
+                    }
+                },
 
+            image: {
+                extension: "png|jpg|gif"
             }
         },
 
@@ -115,8 +119,14 @@ $(function() {
                     rangelength: "Отзыв не должен быть меньше 20 и не больше 255 символов"
                 },
             recaptcha_response_field: {
-                checkCaptcha: "Your Captcha response was incorrect. Please try again."
-                }
+                required:  "Вы должны ввести капчу",
+                checkCaptcha: "Ваша капча неверная. Попробуйте снова."
+                },
+
+            image: {
+                extension: "Тут можно прекрепить только файлы форматов  gif,jpg,png."
+            }
+
             },
 
 
@@ -129,22 +139,37 @@ $(function() {
             var recall =  $("#recall").val();
             var filename = '';
 
+            var data = 'name='+ name +'&email='+ email + '&title=' + title + '&recall=' + recall;
 
-            var data = 'name='+ name +'&email='+ email + '&title=' + title + '&recall=' + recall + '&filename=' + filename;
+            var $input = $("#uploadImage");
+            var file = new FormData;
+            file.append('image', $input.prop('files')[0]);
+
 
             $.ajax({
+                url: "app/upload/ajaxupload.php",
                 type: "POST",
-                url: "app/config/addRecall.php",
-                data: data,
-                success: function(){
-                    //alert('2');
-                    $("#myModal").modal("hide");
-                    $("#check").slideToggle(200).hide(7200);
-                    $('#modalForm')[0].reset();
+                data:  file,
+                contentType: false,
+                cache: false,
+                processData:false,
+                success: function(filePath)
+                {
+                    data += '&filename=' + filePath;
+                    $.ajax({
+                        type: "POST",
+                        url: "app/config/addRecall.php",
+                        data: data,
+                        success: function(){
+                            $("#myModal").modal("hide");
+                            $("#check").slideToggle(200).hide(7200);
+                            $('#modalForm')[0].reset();
+                        }
+                    });
                 }
+
             });
 
-            return false;
         }
 
     });
